@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Number Generator</title>
+    </head>
+    <body>
+        <h1>Random Number Generator</h1>
+        <label for="min">min.<label> <input id="min" type="number" value="1">
+        <label for="max">max.</label> <input id="max" type="number" value="100">
+        <input id="generate" type="button" value="generate">
+        <label id="random"></label>
+        <script>
+            const minInput = document.getElementById("min");
+            const maxInput = document.getElementById("max");
+            const generateButton = document.getElementById("generate");
+            const randomLabel = document.getElementById("random");
+            generateButton.addEventListener("click", (e) => {
+                const min = Number.parseInt(minInput.value);
+                const max = Number.parseInt(maxInput.value)
+                const rand = Math.round((Math.random() * (max - min)) + min);
+                random.innerHTML = rand;
+            });
+        </script>
+    </body>
+</html>
